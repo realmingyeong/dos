@@ -1,4 +1,4 @@
 # dos
 Don't silence
 
-hi dos
+hi dos bye dos
