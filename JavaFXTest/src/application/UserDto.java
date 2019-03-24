@@ -4,13 +4,13 @@ public class UserDto {
 	
 	private int no;
 	private String id;
-	private String pw;
+	private String password;
 	
-	public UserDto(int no, String id, String pw) {
+	public UserDto(int no, String id, String password) {
 		super();
 		this.no = no;
 		this.id = id;
-		this.pw = pw;
+		this.password = password;
 	}
 	
 	public int getNo() {
@@ -25,10 +25,10 @@ public class UserDto {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getPw() {
-		return pw;
+	public String getPassword() {
+		return password;
 	}
-	public void setPw(String pw) {
-		this.pw = pw;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }
