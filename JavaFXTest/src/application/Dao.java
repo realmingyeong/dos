@@ -28,6 +28,7 @@ public class Dao{
 		}catch (SQLException sqle) {
 			System.out.println("SELECT문에서 예외 발생");
 			sqle.printStackTrace();
+			
 		}finally {
 			//DataBase 연결 종료
 			try {
@@ -42,6 +43,7 @@ public class Dao{
 
 
 	public static void insert(UserDto dto) {
+		
 		Connection conn = null; //DataBase에 연결된 상태를 담은 객체
 		PreparedStatement pstm = null; //SQL문을 담은 객체
 		int rs;
@@ -63,6 +65,7 @@ public class Dao{
 		}catch(SQLException sqle) {
 			System.out.println("SELECT문에서  예외 발생");
 			sqle.printStackTrace();
+			
 		}finally {
 			//DataBase 연결 종료
 			try {
@@ -74,7 +77,7 @@ public class Dao{
 		}
 	}
 	
-/*	public static void delete(String id) {
+	public static void delete(String id) {
 		Connection conn = null; //DataBase에 연결된 상태를 담은 객체
 		PreparedStatement pstm = null; //SQL문을 담은 객체
 		int rs;
@@ -102,5 +105,5 @@ public class Dao{
 			}
 		}
 	}
-	*/
+	
 }

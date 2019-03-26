@@ -2,12 +2,11 @@ package application;
 
 public class UserDto {
 	
-	private int no;
-	private String id;
-	private String password;
+	int no;
+	String id;
+	String password;
 	
 	public UserDto(int no, String id, String password) {
-		super();
 		this.no = no;
 		this.id = id;
 		this.password = password;
