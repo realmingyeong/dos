@@ -32,6 +32,7 @@ public class Controller implements Initializable{
 	}
 	
 	public void insert(ActionEvent e){
+		System.out.println("Input Clicked");
 		UserDto dto= new UserDto(1, txt1.getText(), txt2.getText());
 		Dao.insert(dto);
 	}
