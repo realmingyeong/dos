@@ -1,9 +1,11 @@
-package single_mode_4;
+package single_mode_11;
 
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
@@ -37,7 +39,10 @@ public class SingleMode extends JFrame {
 		setVisible(true);
 		setBackground(new Color(0, 0, 0, 0));
 		setLayout(null);
-
+		
+		//KeyListener Class ì¶”ê°€
+		addKeyListener(new KeyListener());
+		
 		exitButton.setBounds(1245, 0, 30, 30);
 		exitButton.setBorderPainted(false);
 		exitButton.setContentAreaFilled(false);
@@ -90,8 +95,8 @@ public class SingleMode extends JFrame {
 		});
 		add(menuBar);
 
-		// ½ÇÇàÇÏ¸é introÀ½¾Ç ÀÚµ¿ ½ÇÇàµÊ
-		// mp3È®ÀåÀÚ¸¦ ½ÇÇàÇÏ´Â ¶óÀÌºê·¯¸®
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ introï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
+		// mp3È®ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½
 		Music introMusic = new Music("introMusic.mp3", true);
 		introMusic.start();
 	}
@@ -105,10 +110,10 @@ public class SingleMode extends JFrame {
 
 	public void screenDraw(Graphics g) {
 		g.drawImage(Background, 0, 0, null);
-		paintComponents(g); // JLabelÀ» ±×·ÁÁÜ
+		paintComponents(g); // JLabelï¿½ï¿½ ï¿½×·ï¿½ï¿½ï¿½
 		this.repaint();
 	}
 }
 
-//´õºí ¹öÆÛ¸µ-ÇöÀç ÇÁ·Î±×·¥ÀÇ ÀüÃ¼È­¸é¿¡ ¸Â´Â ÀÌ¹ÌÁö¸¦ ¸Å ¼ø°£ »ý¼ºÇÏ¿© ÀÌ¹ÌÁö¸¦ °»½ÅÇØÁÜ
-//¹öÆÛ¿¡ ÀÌ¹ÌÁö¸¦ ´ã¾ÆµÒ
+//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Û¸ï¿½-ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼È­ï¿½é¿¡ ï¿½Â´ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//ï¿½ï¿½ï¿½Û¿ï¿½ ï¿½Ì¹ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æµï¿½

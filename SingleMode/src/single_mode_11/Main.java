@@ -1,4 +1,4 @@
-package single_mode_4;
+package single_mode_11;
 
 public class Main {
 
@@ -9,6 +9,6 @@ public class Main {
 
 		new SingleMode();
 
-		// ¸Þ´º¹Ù ¸¸µé±â
+		// ï¿½Þ´ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
 	}
 }

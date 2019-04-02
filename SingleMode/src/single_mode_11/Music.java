@@ -1,4 +1,4 @@
-package single_mode_4;
+package single_mode_11;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -8,17 +8,17 @@ import javazoom.jl.player.Player;
 
 public class Music extends Thread {
 
-	private Player player; // À½¾Ç °ü·Ã ¶óÀÌºê·¯¸®
-	private boolean isLoop; // À½¾ÇÀÌ ¹«ÇÑ¹Ýº¹Àç»ýÀÎÁö ÇÑ¹øÀç»ýÀÎÁö È®ÀÎÇØÁÖ´Â º¯¼ö
+	private Player player; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ìºê·¯ï¿½ï¿½
+	private boolean isLoop; // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ñ¹Ýºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½
 	private File file;
 	private FileInputStream fis;
 	private BufferedInputStream bis;
 
 	public Music(String name, boolean isLoop) {
 		try {
-			this.isLoop = isLoop; // º¯¼ö ÃÊ±âÈ­
-			file = new File(Main.class.getResource("../music/" + name).toURI()); // ÇØ´ç nameÀÇ ÆÄÀÏÀ» url·Î À§Ä¡¸¦ °¡Á®¿È
-			// ÆÄÀÏÀ» ¹öÆÛ¿¡ ´ã¿¡ ÀÐ¾î¿Ã ¼ö ÀÖ°Ô ÇÔ.
+			this.isLoop = isLoop; // ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­
+			file = new File(Main.class.getResource("../music/" + name).toURI()); // ï¿½Ø´ï¿½ nameï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ urlï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Û¿ï¿½ ï¿½ã¿¡ ï¿½Ð¾ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½ï¿½.
 			fis = new FileInputStream(file);
 			bis = new BufferedInputStream(fis);
 			player = new Player(bis);
@@ -27,15 +27,15 @@ public class Music extends Thread {
 		}
 	}
 
-	// ÇöÀç ½ÇÇàµÇ°í ÀÖ´Â À½¾ÇÀÌ ¾ó¸¶³ªÀÇ ½Ã°£ÀÌ ½ÇÇàµÆ´ÂÁö
-	// ³ëÆ®¸¦ ¶³¾î¶ß¸±¶§ ½Ã°£ ºÐ¼®
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ó¸¶³ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Æ´ï¿½ï¿½ï¿½
+	// ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ß¸ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ ï¿½Ð¼ï¿½
 	public int getTime() {
 		if (player == null)
 			return 0;
 		return player.getPosition();
 	}
 
-	// À½¾ÇÀ» Ç×»ó Á¾·á½ÃÄÑÁÖ´Â ÇÔ¼ö
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½×»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Ô¼ï¿½
 	public void close() {
 		isLoop = false;
 		player.close();
