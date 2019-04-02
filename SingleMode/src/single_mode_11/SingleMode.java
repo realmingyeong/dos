@@ -39,10 +39,7 @@ public class SingleMode extends JFrame {
 		setVisible(true);
 		setBackground(new Color(0, 0, 0, 0));
 		setLayout(null);
-		
-		//KeyListener Class 추가
-		addKeyListener(new KeyListener());
-		
+				
 		exitButton.setBounds(1245, 0, 30, 30);
 		exitButton.setBorderPainted(false);
 		exitButton.setContentAreaFilled(false);
