@@ -90,8 +90,6 @@ public class SingleMode extends JFrame {
 		});
 		add(menuBar);
 
-		// 실행하면 intro음악 자동 실행됨
-		// mp3확장자를 실행하는 라이브러리
 		Music introMusic = new Music("introMusic.mp3", true);
 		introMusic.start();
 	}
@@ -105,10 +103,7 @@ public class SingleMode extends JFrame {
 
 	public void screenDraw(Graphics g) {
 		g.drawImage(Background, 0, 0, null);
-		paintComponents(g); // JLabel을 그려줌
+		paintComponents(g); 
 		this.repaint();
 	}
 }
-
-//더블 버퍼링-현재 프로그램의 전체화면에 맞는 이미지를 매 순간 생성하여 이미지를 갱신해줌
-//버퍼에 이미지를 담아둠

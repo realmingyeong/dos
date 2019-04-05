@@ -8,7 +8,5 @@ public class Main {
 	public static void main(String[] args) {
 
 		new SingleMode();
-
-		// 메뉴바 만들기
 	}
 }
