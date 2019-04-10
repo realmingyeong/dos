@@ -9,7 +9,6 @@ import java.net.Socket;
 public class Client {
 
 	public static void main(String[] args) {
-
 		try {// 서버 접속
 			Socket socket = new Socket("127.0.0.1", 9000);
 
